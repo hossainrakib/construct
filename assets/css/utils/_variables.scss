@@ -1,0 +1,189 @@
+//text-color
+$title-color:#252c30;
+$second-title-color:#2d3e50;
+$contact-title:#0c0e37;
+$main-color:#ffc000;
+$white-color:#fff;
+$para-color:#232323;
+$second-title-color:#2d3e50;
+$testti-para-color:#56616e;
+$socail-color:#2d3e50;
+$dot-color:#c2a241;
+
+//backgroutd-color
+
+$main-bg:#2d3e50;
+$secondary-bg:#ffc000;
+$white-bg:#fff;
+$testimonials-bg:#f4f4f4;
+$input-bg:#f0f0f0;
+
+
+//section-padding
+
+.section-padding{
+    padding: 120px 0px;
+
+    @include respond-between(md, lg) {
+         padding: 100px 0px;
+    }
+    @include respond-between(sm, md) {
+         padding: 70px 0px;
+    }
+    @include respond-between(xs, sm) {
+         padding: 40px 0px;
+    }
+    @include respond-below(xs) {
+          padding: 30px 0px;
+    }
+
+}
+.speace-70 {
+    padding-top: 70px;
+
+    @include respond-between(md, lg) {
+        padding-top: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 30px;
+    }
+    @include respond-below(xs) {
+        padding-top: 26px;
+    }
+}
+.speace-b-70 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 30px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 26px;
+    }
+}
+.speace-60 {
+    padding-top: 60px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-b-60 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+.speace-50 {
+    padding-top: 50px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+
+.speace-b-50 {
+    padding-bottom: 50px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+
+.speace-40 {
+    padding-top: 40px;
+
+    @include respond-between(md, lg) {
+        padding-top: 30px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 25px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-30 {
+    padding-top: 30px;
+
+    @include respond-between(md, lg) {
+        padding-top: 25px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 20px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 18px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+//bg-size
+.bg-cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+}
+
+//html&body
+html, body{
+    height: 100%;
+    width: 100%;
+}
+//button
+.btn{
+    outline: none;
+    border: none;
+}

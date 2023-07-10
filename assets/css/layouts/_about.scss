@@ -1,0 +1,94 @@
+.about-area{
+    .about-wrapper{
+        .single-about{
+            background-color: $main-bg;
+            padding: 60px 20px 90px 20px; 
+            transition: all .4s ease-in-out;
+            border: 2px solid transparent;
+            @include respond-between(md, lg) {
+                padding: 50px 15px 70px 15px; 
+            }
+            @include respond-between(sm, md) {
+                padding: 35px 15px 50px 15px; 
+            }
+            @include respond-between(xs, sm) {
+                padding: 30px 50px 40px 50px; 
+              
+            }
+            @include respond-below(xs) {
+                padding: 30px 40px 40px 40px; 
+              
+            }
+            .about-icon{
+                height: 90px;
+                width: 90px;
+                border-radius: 50%;
+                background-color: $white-color;
+
+                i{
+                    color: $main-color;
+                    font-size:40px;
+                }
+            }
+            .about-heading{
+                h2{
+                    @include font($second-font, 18, 600);
+                    @include text($white-color, uppercase, 30px);
+                    margin-bottom: 20px;
+
+                    @include respond-between(md, lg) {
+                        margin-bottom: 15px;
+                        line-height: 25px
+  
+                    }
+                    @include respond-between(sm, md) {
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                      
+                    }
+                    @include respond-below(xs) {
+                      
+                    }
+                }
+            }
+            .about-discrip{
+                p{
+                    @include para-style;
+                    color: $white-color;
+
+                    @include respond-between(md, lg) {
+                        line-height: 25px;
+                        font-size: 15px;
+  
+                    }
+                    @include respond-between(sm, md) {
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                      
+                    }
+                    @include respond-below(xs) {
+                      
+                    }
+                }
+            }
+            &:hover{
+                background-color: $white-bg;
+                border: 2px solid $main-color;
+            }
+            &:hover .about-heading h2 {
+                color: $title-color;
+            }
+            &:hover .about-discrip p{
+                color: $para-color;
+            }
+            &:hover .about-icon{
+                background-color: $secondary-bg;
+            }
+            &:hover .about-icon i{
+                color: $white-color;
+            }
+        }
+    }
+}

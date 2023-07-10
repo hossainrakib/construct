@@ -1,0 +1,50 @@
+.news-area{
+    .single-news{
+        width: 300px;
+        .news-image{
+            img{
+    
+            }
+        }
+        .news-contain{
+            background-color: $secondary-bg;
+            padding: 25px 20px;
+            .news-heading{
+                h2{
+                    @include font($second-font, 18, 600);
+                    @include text($white-color, capitalize, auto);
+                }
+            }
+            .news-discrip{
+                p{
+                    @include para-style;
+                    color: $white-color;
+                }
+            }
+            .news-date{
+                .date{
+                    @include font($main-font, 14, 400);
+                    @include text($title-color, capitalize, auto);
+                    &:hover {
+                        color: $white-color;
+                    }
+                }
+                button{
+                    a{
+                        @include font($main-font, 14, 400);
+                        @include text($title-color, capitalize, auto);
+                        display: inline-block;
+                        position: relative;
+                        &::after{
+                            @include after($white-color, 2px, 10%, none, -5px, 0, none);
+                            transition: all .4s ease-in-out;
+                        }
+                        &:hover::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

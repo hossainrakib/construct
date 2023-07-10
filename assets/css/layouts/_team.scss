@@ -1,0 +1,67 @@
+.team-area{
+    .team-wrapper{
+        .single-member{
+            background-color: $main-bg;
+            .member-profile{
+                .image{
+                    img{
+
+                    }
+                }
+            }
+            .team-contain{
+                .member-name{
+                    h2{
+                        @include font($main-font, 18, 600);
+                        @include text($white-color, capitalize, auto);
+                        margin-bottom: 10px;
+                    }
+                }
+                .member-skile{
+                    h4{
+                        @include font($main-font, 14, 400);
+                        @include text($main-color, capitalize, auto);
+
+                    }
+                }
+                .social-area{
+                    .socail-icon{
+                        margin:0 10px;
+                        height: 45px;
+                        width: 40px;
+                        background-color: $white-bg;
+                        transition: all .4s ease-in-out;
+
+
+                        @include respond-between(sm, md) {
+                            height: 35px;
+                            width: 30px;
+                        }
+                        @include respond-between(xs, sm) {
+                            height: 30px;
+                            width: 25px;
+                        }
+                        @include respond-below(xs) {
+                            height: 35px;
+                            width: 30px;
+                        }
+                        .icon{
+                            i{
+                                font-size: 16px;
+                                font-weight: 400;
+                                color: $socail-color;
+                                transition: all .4s ease-in-out;
+                            }
+                        }
+                        &:hover {
+                            background-color: $secondary-bg;
+                        }
+                        &:hover .icon i {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

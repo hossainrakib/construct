@@ -1,0 +1,74 @@
+.section-heading{
+    .sub-title{
+        h4{
+            @include font($second-font, 18, 400);
+            @include text($para-color, capitalize, 30px);
+            margin-bottom: 10px;
+
+            @include respond-between(xs, sm) {
+                font-size: 15px;
+                line-height: 20px;
+                margin-bottom: 5px;
+              
+            }
+            @include respond-below(xs) {
+                font-size: 14px;
+                line-height: 18px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    h2{
+        @include font($second-font, 36, 600);
+        @include text($title-color, capitalize, 30px);
+        margin-bottom: 35px;
+        
+        @include respond-between(md, lg) {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        @include respond-between(sm, md) {
+            margin-bottom: 25px;
+            font-size: 25px;
+          
+        }
+        @include respond-between(xs, sm) {
+            margin-bottom: 15px;
+            font-size: 22px;
+          
+        }
+        @include respond-below(xs) {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        span{
+            color: $main-color;
+        }
+    }
+    &-discrip{
+        p{
+            @include font($second-font, 18, 400);
+            @include text($para-color, capitalize, 30px);
+    
+            @include respond-between(md, lg) {
+                font-size: 15px;
+      
+            }
+            @include respond-between(sm, md) {
+              font-size: 14px;
+              line-height: 20px;
+            }
+
+            @include respond-between(xs, sm) {
+                font-size: 12px;
+                line-height: 17px;
+              
+            }
+            @include respond-below(xs) {
+                font-size: 10px;
+                line-height: 15px;
+            }
+        }
+    }
+}
+

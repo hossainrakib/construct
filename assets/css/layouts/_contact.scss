@@ -1,0 +1,90 @@
+.contact-area{
+    .contact-heading{
+        h2{
+            @include font($main-font, 24,600);
+            @include text($contact-title, capitalize, 30px);
+
+            @include respond-between(md, lg) {
+                font-size: 22px;
+            }
+            @include respond-between(sm, md) {
+              font-size: 20px;
+              line-height: 25px;
+            }
+            @include respond-between(xs, sm) {
+              font-size: 18px;
+            }
+            @include respond-below(xs) {
+              font-size: 17px;
+              line-height: 20px;
+            }
+        }
+    }
+  form{
+      .contact-mail{
+          input{
+              width: 100%;
+              border: none;
+              background-color: $input-bg;
+              padding: 25px 35px;
+              border-radius: 50px;
+              box-shadow:2px 2px 40px -10px $contact-title;
+
+              @include respond-between(md, lg) {
+                  padding: 23px 30px;
+              }
+              @include respond-between(sm, md) {
+                padding: 20px 26px;
+              }
+              @include respond-between(xs, sm) {
+                padding: 18px 24px;
+              }
+              @include respond-below(xs) {
+                padding: 16px 20px;
+              }
+            }
+          input.form-control::placeholder{
+              @include para-style;
+              color: $contact-title;
+
+              @include respond-below(xs) {
+                  font-size: 10px;
+                }
+          }
+          input.form-control:focus {
+            color:$title-color;
+            background-color:transparent;
+            border-color:none;
+            outline:0;
+            box-shadow:0 0 0 2px $contact-title;
+
+           }
+          button{
+              padding: 0;
+               a{
+                  @include btn;
+                  padding: 25px 70px !important;
+
+                    @include respond-between(md, lg) {
+                        padding: 23px 40px !important;
+                    }
+                    @include respond-between(sm, md) {
+                      padding: 20px 35px !important;
+                    }
+                    @include respond-between(xs, sm) {
+                      padding: 18px 25px !important;
+                    }
+                    @include respond-below(xs) {
+                      padding: 16px 20px !important;
+                    }
+               }
+          }
+      }
+      #reply{
+        margin-top: 10px;
+        @include para-style;
+        color: $contact-title;
+        text-align: center;
+      }
+    }
+}

@@ -1,0 +1,72 @@
+.protfolio-area{
+    .protfolio-wrapper{
+        .protfolio-menu{
+            .nav-pills{
+                .nav-item{
+                    .nav-link{
+                        @include font($main-font, 24, 600);
+                        @include text($title-color, uppercase, 24px);
+                        display: inline-block;
+                        padding: 20px 15px;
+                        cursor: pointer;
+                        transition: all .4s ease-in-out;
+
+                        @include respond-between(md, lg) {
+                            font-size: 20px;
+                            padding: 18px 13px;
+                        }
+                        @include respond-between(sm, md) {
+                            font-size: 18px;
+                            padding: 15px 10px;
+                        }
+                        @include respond-between(xs, sm) {
+                            font-size: 15px;
+                            padding: 14px 9px;
+                        }
+                        @include respond-below(xs) {
+                            font-size: 12px;
+                            padding: 13px 8px;
+                        }
+                        &.active{
+                            color: $main-color;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+        .protfolio-tab{
+            .protfolio-gallary{
+                .single-protfolio{
+                    .protfolio-img{
+                        img{
+    
+                        }
+                        .protfolio-action{
+                            transform: scale(0);
+                            transform-origin: left bottom;
+                            transition: all .4s ease-in-out;
+
+                            .protfolio-overlay{
+                                background-color: $secondary-bg;
+                                opacity: .3;
+                                z-index: 1;
+
+                            }
+                            .zoom-icon{
+                                z-index: 9999;
+                                i{
+                                    font-size: 30px;
+                                    color: $white-color;
+                                }
+                            }
+                        }
+                    }
+                    &:hover .protfolio-action {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}

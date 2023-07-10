@@ -1,0 +1,13 @@
+.copy-right-area{
+    .copy-right-contain{
+        p{                        
+            @include font($main-font, 12, 400);
+            @include text($contact-title, capitalize, auto);
+
+
+            @include respond-below(xs) {
+              font-size: 10px;
+            }
+        }
+    }
+}

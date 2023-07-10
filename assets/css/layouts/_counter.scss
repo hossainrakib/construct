@@ -1,0 +1,77 @@
+.counter-area{
+    .count-bg{
+        padding: 80px 0;
+        @include respond-between(md, lg) {
+            padding: 50px 0;
+    
+        }
+        @include respond-between(sm, md) {
+           padding: 40px 0;
+    
+        }
+        @include respond-between(xs, sm) {
+            padding: 35px 0;
+          
+        }
+        @include respond-below(xs) {
+          padding: 20px 0;
+        }
+    }
+    .single-counter{
+
+        &:hover .counter-title h3{
+            color: $main-color;
+        }
+        &:hover .count-number a {
+            color: $dot-color;
+        }
+        .counter-title{
+            h3{
+                @include font($second-font, 26, 500);
+                @include text($white-color, capitalize, 30px);
+                margin-bottom: 20px;
+                @include respond-between(md, lg) {
+                    font-size: 20px;
+                    line-height: 25px;
+                }
+                @include respond-between(sm, md) {
+                    font-size: 18px;
+                    line-height: 20px;
+                  
+                }
+                @include respond-between(xs, sm) {
+                    font-size: 15px;
+                    line-height: 20px;
+                  
+                }
+                @include respond-below(xs) {
+                    font-size: 15px;
+                    line-height: 18px;
+                  
+                }
+            }
+        }
+        .count-number{
+            a{
+                @include font($second-font, 45, 500);
+                @include text($white-color, capitalize, 30px);
+
+                @include respond-between(md, lg) {
+                    font-size: 40px;
+                }
+                @include respond-between(sm, md) {
+                    font-size: 35px;
+                  
+                }
+                @include respond-between(xs, sm) {
+                    font-size: 30px;
+                  line-height: 25px;
+                }
+                @include respond-below(xs) {
+                    font-size: 25px;
+                  line-height: 20px;
+                }
+            }
+        }
+    }
+}

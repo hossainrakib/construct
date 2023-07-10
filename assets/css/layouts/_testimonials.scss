@@ -1,0 +1,90 @@
+.testimonials-area{
+    background-color: $testimonials-bg;
+    .testimonials-wrapper{
+        .single-testimonials{
+            background-color: $white-bg;
+            border-radius: 20px;
+            padding: 70px;
+
+            @include respond-between(md, lg) {
+                padding: 60px;
+  
+            }
+            @include respond-between(sm, md) {
+                  padding: 40px;
+              
+            }
+            @include respond-between(xs, sm) {
+                 padding: 30px;
+              
+            }
+            @include respond-below(xs) {
+                 padding: 25px;
+              
+            }
+            .client-profile{
+                .image{
+                    img{
+
+                    }
+                }
+            }
+            .client-self{
+                margin-left: -30px;
+                @include respond-below(lg) {
+                    margin-left: 0px;
+                }
+
+                .client-name{
+                    h2{
+                        @include font($main-font, 18, 600);
+                        @include text($title-color, uppercase, auto);
+                        margin-bottom: 10px;
+                        transition: all .3s ease-in-out;
+
+                        @include respond-between(sm, md) {
+                          font-size: 16px;
+                          margin-bottom:5px;
+                        }
+                        @include respond-between(xs, sm) {
+                          margin-bottom:5px;
+                          font-size: 16px;
+                          
+                        }
+                        @include respond-below(xs) {
+                          margin-bottom:5px;
+                          font-size: 15px;
+                          
+                        }
+                    }
+                }
+                .client-skile{
+                    h4{
+                        @include font($main-font, 14, 400);
+                        @include text($title-color, uppercase, auto);
+                    }
+                }
+            }
+            .client-discrip{
+                p{
+                    @include para-style;
+                    color: $testti-para-color;
+                    font-style: italic;
+                }
+            }
+            .client-ratting{
+                padding: 20px 0;
+                .icon{
+                    i{
+                        font-size: 16px;
+                        color: $main-color;
+                        padding-right: 10px;
+                    }
+                }
+            }
+            &:hover .client-name h2{
+                color: $main-color;
+            }
+        }
+    }
+}

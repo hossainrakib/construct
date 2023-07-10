@@ -1,0 +1,88 @@
+/*font-family*/
+@mixin font($font-family, $font-size, $font-weight) {
+    font-family: $font-family;
+    font-size: $font-size + px;
+    font-weight: $font-weight;
+}
+
+/* text-size*/
+@mixin text($text-color, $text-transfrom, $line-height) {
+    color: $text-color;
+    text-transform: $text-transfrom;
+    line-height: $line-height;
+}
+
+/*before after*/
+@mixin after($border-color, $height, $width, $top, $bottom , $left, $right) {
+    height: $height;
+    width: $width;
+    left: $left;
+    right: $right;
+    top: $top;
+    bottom: $bottom;
+    background: $border-color;
+    content: '';
+    position: absolute;
+}
+
+/**/
+/**/
+/**/
+/**/
+/**/
+
+@mixin btn {
+    @include font($main-font, 18, 600);
+    @include text($white-color, uppercase, 30px);
+    display: inline-block;
+    padding: 25px 90px;
+    background-color: $secondary-bg;
+    border-radius: 50px;
+    transition: background-color .3s ease-in-out;
+
+
+    @include respond-between(md, lg) {
+        font-size: 16px;
+        padding: 25px 70px;
+      }
+      @include respond-between(sm, md) {
+        font-size: 15px;
+        padding: 20px 50px;
+        }
+        @include respond-between(xs, sm) {
+            font-size: 14px;
+            padding: 20px 40px;
+        }
+        @include respond-below(xs) {
+            font-size: 14px;
+            padding: 15px 30px;
+        }
+
+    &:hover{
+        background-color: $main-bg;
+    }
+}
+
+//para-style
+
+@mixin para-style {
+    @include font($main-font, 16, 400);
+    @include text($para-color, capitalize, 30px);
+
+    @include respond-between(md, lg) {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    @include respond-between(sm, md) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    @include respond-between(xs, sm) {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    @include respond-below(xs) {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

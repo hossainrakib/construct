@@ -1,0 +1,123 @@
+.hero-area{
+    .hero-wrapper{
+        .hero-contain{
+            h2{
+
+                @include font($second-font, 71, 500);
+                @include text($white-color, uppercase, auto);
+
+
+                @include respond-between(md, lg) {
+                    font-size: 50px;
+                  }
+                  @include respond-between(sm, md) {
+                      font-size: 40px;
+                    }
+                    @include respond-between(xs, sm) {
+                        font-size: 30px;
+                    }
+                    @include respond-below(xs) {
+                        font-size: 20px;
+                    }
+                span{
+                    color: $main-color;
+                }
+            }
+            p{
+                @include font($main-font, 16, 300);
+                @include text($white-color, capitalize, 30px);
+                padding: 40px 60px 50px 60px;
+
+                @include respond-between(md, lg) {
+                    padding: 30px 40px 40px 40px;
+                    
+                }
+                @include respond-between(md, lg) {
+                    padding: 25px 10px 30px 10px;
+                }
+                @include respond-between(sm, md) {
+                    padding: 25px 0px 30px 0px;
+                }
+                @include respond-between(xs, sm) {
+                    padding: 25px 0px 30px 0px;
+                    font-size: 14px;
+                }
+                @include respond-below(xs) {
+                    padding: 20px 0px 25px 0px;
+                    font-size: 12px;
+                    line-height: 20px
+                }
+  
+
+            }
+            button{
+                a{
+                    @include btn;
+                }
+            }
+        }
+    }
+    .slider-active{
+        .slick-list, .slick-track{
+            height: 100% !important;
+        }
+        .slick-dots{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 40px;
+            width: 100%;
+            z-index: 999;
+            li{
+                margin: 0 10px;
+                height: 8px;
+                width: 25px;
+                background-color: $dot-color;
+
+                @include respond-below(sm) {
+                    height: 5px;
+                    width: 15px;
+                }
+
+                button{
+                    display: none;
+                }
+                &:hover{
+                    background-color: $main-color;
+                    color: $main-color;
+                    cursor: pointer;
+                }
+                &.slick-active{
+                    background-color: $main-color;
+                }
+            }
+        }
+        .slick-arrow{
+            border: none;
+            background: transparent;
+            position: absolute;
+            top: 50%;
+            right: 15%;
+            transform: translateY(-50%);
+            z-index:999;
+            transition: all .4s ease-in-out;
+
+            &:hover{
+                background-color: $main-bg;
+                color: $white-color;
+            }
+
+            &.slick-prev {
+                left: 15% !important;
+                position: absolute;
+            }
+
+            i{
+                font-size: 20px;
+                padding: 12px;
+                color: $main-color;
+            }
+
+        }
+    }
+}
